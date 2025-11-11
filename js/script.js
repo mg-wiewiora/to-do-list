@@ -51,13 +51,14 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="form__taskBody${task.done ? " form__taskBody--done" : ""}"
-            >
-            <button class="form__taskButton form__taskButton--done js-done">✓</button> 
-            ${task.content}
-             <button class="form__taskButton js-delete">🗑</button>
-            </li>
-        `;
+             <li 
+              class="form__taskBody${task.done ? " form__taskBody--done" : ""}"
+             >
+              <button class="form__taskButton form__taskButton--done js-done">✓</button> 
+              ${task.content}
+              <button class="form__taskButton js-delete">🗑</button>
+             </li>
+           `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
