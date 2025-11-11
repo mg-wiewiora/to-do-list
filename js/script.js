@@ -53,9 +53,9 @@
             htmlString += `
             <li class="form__taskBody${task.done ? " form__taskBody--done" : ""}"
             >
-            <button class="js-done">✓</button> 
+            <button class="form__taskButton form__taskButton--done js-done">✓</button> 
             ${task.content}
-             <button class="js-delete">🗑</button>
+             <button class="form__taskButton js-delete">🗑</button>
             </li>
         `;
         }
