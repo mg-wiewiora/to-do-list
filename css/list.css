@@ -14,7 +14,7 @@
 
 }
 
-.list__taskBody--done {
+.list__taskContent--done {
     text-decoration: line-through;
 }
 

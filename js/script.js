@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "skończyć moduł",
-            done: false,
-        },
-        {
-            content: "zjeść obiad",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addTask = (taskInput) => {
         tasks.push({
@@ -47,21 +38,26 @@
     }
 
     const render = () => {
-        let htmlString = "";
+        let taskHTMLContent = "";
 
         for (const task of tasks) {
-            htmlString += `
+            taskHTMLContent += `
              <li 
-              class="list__taskBody${task.done ? " list__taskBody--done" : ""}"
+              class="list__taskBody js-task"
              >
-              <button class="list__taskButton list__taskButton--checkMark js-done">✓</button> 
-              ${task.content}
-              <button class="list__taskButton list__taskButton--delete js-delete">🗑</button>
+              <button class="list__taskButton list__taskButton--checkMark js-done">
+               ${task.done ? "✓" : ""}
+              </button> 
+              <span class="list__taskContent${task.done ? " list__taskContent--done" : ""}">
+               ${task.content}</span>
+              <button class="list__taskButton list__taskButton--delete js-delete">
+              🗑
+              </button>
              </li>
            `;
         }
 
-        document.querySelector(".js-taskList").innerHTML = htmlString;
+        document.querySelector(".js-taskList").innerHTML = taskHTMLContent;
 
         triggerEvents();
     };
