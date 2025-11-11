@@ -3,3 +3,14 @@
     margin: 10px 0;
     box-shadow: 0 5px #ddd;
 }
+
+.section__title {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+}
+
+.section__content {
+    padding: 20px;
+}
