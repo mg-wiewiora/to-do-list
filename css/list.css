@@ -17,3 +17,35 @@
 .list__taskBody--done {
     text-decoration: line-through;
 }
+
+.list__taskButton {
+    color: white;
+    border: none;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.list__taskButton--checkMark {
+    background-color: #0a8127;
+}
+
+.list__taskButton--checkMark:hover {
+    background-color: #0b982f;
+}
+
+.list__taskButton--checkMark:active {
+    background-color: #0daf36;
+}
+
+.list__taskButton--delete {
+    background-color: #ef2121;
+}
+
+.list__taskButton--delete:hover {
+    background-color: #f13737;
+}
+
+.list__taskButton--delete:active {
+    background-color: #f34f4f;
+}

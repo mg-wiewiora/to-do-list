@@ -54,9 +54,9 @@
              <li 
               class="list__taskBody${task.done ? " list__taskBody--done" : ""}"
              >
-              <button class="list__taskButton list__taskButton--done js-done">✓</button> 
+              <button class="list__taskButton list__taskButton--checkMark js-done">✓</button> 
               ${task.content}
-              <button class="list__taskButton js-delete">🗑</button>
+              <button class="list__taskButton list__taskButton--delete js-delete">🗑</button>
              </li>
            `;
         }
