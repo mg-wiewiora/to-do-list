@@ -5,3 +5,10 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+.page {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+}
