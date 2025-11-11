@@ -10,9 +10,9 @@
         },
     ];
 
-    const addNewTask = (newTaskContent) => {
+    const addTask = (taskInput) => {
         tasks.push({
-            content: newTaskContent,
+            content: taskInput,
         });
 
         render();
@@ -69,13 +69,13 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const taskInput = document.querySelector(".js-taskInput").value.trim();
 
-        if (newTaskContent === "") {
+        if (taskInput === "") {
             return;
         }
 
-        addNewTask(newTaskContent);
+        addTask(taskInput);
     };
 
     const init = () => {
