@@ -10,6 +10,19 @@
         },
     ];
 
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+
+        render();
+    };
+
+    const deleteTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -19,20 +32,20 @@
              ${task.done ? " style=\"text-decoration: line-through\"" : ""}
             >
              ${task.content}
+             <button class="js-delete">🗑</button>
             </li>
         `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-    };
+        const deleteButtons = document.querySelectorAll(".js-delete");
 
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
+        deleteButtons.forEach((deleteButton, index) => {
+            deleteButton.addEventListener("click", () => {
+                deleteTask(index);
+            });
         });
-
-        render();
     };
 
     const onFormSubmit = (event) => {
