@@ -39,13 +39,13 @@
 }
 
 .list__taskButton--delete {
-    background-color: #ef2121;
+    background-color: #e42121;
 }
 
 .list__taskButton--delete:hover {
-    background-color: #f13737;
+    background-color: #e63737;
 }
 
 .list__taskButton--delete:active {
-    background-color: #f34f4f;
+    background-color:#e94e4e;
 }
