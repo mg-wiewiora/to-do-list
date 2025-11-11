@@ -28,6 +28,24 @@
         render();
     }
 
+    const triggerEvents = () => {
+        const deleteButtons = document.querySelectorAll(".js-delete");
+
+        deleteButtons.forEach((deleteButton, index) => {
+            deleteButton.addEventListener("click", () => {
+                deleteTask(index);
+            });
+        });
+
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+            toggleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
+        });
+    }
+
     const render = () => {
         let htmlString = "";
 
@@ -45,21 +63,7 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        const deleteButtons = document.querySelectorAll(".js-delete");
-
-        deleteButtons.forEach((deleteButton, index) => {
-            deleteButton.addEventListener("click", () => {
-                deleteTask(index);
-            });
-        });
-
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
-
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
-            toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
-            });
-        });
+        triggerEvents();
     };
 
     const onFormSubmit = (event) => {
