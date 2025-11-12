@@ -44,9 +44,7 @@
 
         for (const task of tasks) {
             taskHTMLContent += `
-             <li 
-              class="list__taskBody js-task"
-             >
+              <li class="list__taskBody js-task">
               <button class="list__taskButton list__taskButton--checkMark js-done">
                ${task.done ? "✓" : ""}
               </button> 
